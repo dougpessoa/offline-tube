@@ -1,0 +1,15 @@
+import { render } from '@testing-library/react'
+import { cleanup } from '@testing-library/react'
+
+import {{pascalCase name}} from '.'
+
+afterEach(cleanup)
+describe('<{{pascalCase name}} />', () => {
+  it('should render the component', () => {
+    const { container } = render(<{{pascalCase name}} label="{{pascalCase name}}" />)
+
+    expect(container).toBeInTheDocument()
+
+    expect(container.firstChild).toMatchSnapshot()
+  })
+})
